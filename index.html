@@ -14,11 +14,11 @@
     html { scroll-behavior: smooth; }
 
     /* Reveal on scroll */
-    .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: .1s; }
-    .reveal-d2 { transition-delay: .2s; }
-    .reveal-d3 { transition-delay: .3s; }
+    .reveal { opacity: 0; transform: translateY(36px) scale(.97); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .reveal.in { opacity: 1; transform: translateY(0) scale(1); }
+    .reveal-d1 { transition-delay: .12s; }
+    .reveal-d2 { transition-delay: .24s; }
+    .reveal-d3 { transition-delay: .36s; }
 
     /* Marquee */
     .marquee-track { animation: marquee 36s linear infinite; }
@@ -46,7 +46,7 @@
     .group:hover .zoom-img { transform: scale(1.08); }
 
     /* Gradient text */
-    .grad-text { background: linear-gradient(120deg,#2563EB, #3B82F6 40%, #60A5FA); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .grad-text { background: linear-gradient(120deg,#1D4ED8, #2563EB 45%, #38BDF8); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -83,7 +83,7 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl px-4 md:px-8 py-4 flex justify-between items-center shadow-[0_4px_30px_rgba(15,41,66,0.06)]">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center font-extrabold text-white text-xl shadow-lg shadow-blue-500/30">G</div>
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center font-extrabold text-white text-xl shadow-lg shadow-blue-500/30">G</div>
       <div>
         <span class="text-lg font-extrabold tracking-tight block leading-none">GRACE</span>
         <span class="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-semibold">International</span>
@@ -100,7 +100,7 @@
       <a href="#contact" class="hidden sm:inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition shadow-lg shadow-blue-500/25">
         Hire Talent
       </a>
-      <button id="menuBtn" aria-label="Toggle menu" class="lg:hidden w-10 h-10 rounded-2xl bg-white/80 shadow-sm flex items-center justify-center text-[#0F2942]">
+      <button id="menuBtn" aria-label="Toggle menu" class="lg:hidden w-10 h-10 rounded-xl bg-white/80 shadow-sm flex items-center justify-center text-[#0F2942]">
         <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -112,12 +112,12 @@
   </header>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden lg:hidden fixed top-[68px] left-4 right-4 z-40 bg-white rounded-3xl shadow-2xl shadow-blue-900/20 p-6 space-y-1">
-    <a href="#about" class="mobile-link block px-4 py-3 rounded-2xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">About</a>
-    <a href="#sectors" class="mobile-link block px-4 py-3 rounded-2xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Sectors</a>
-    <a href="#process" class="mobile-link block px-4 py-3 rounded-2xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Process</a>
-    <a href="#showcase" class="mobile-link block px-4 py-3 rounded-2xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Showcase</a>
-    <a href="#guarantee" class="mobile-link block px-4 py-3 rounded-2xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Guarantee</a>
+  <div id="mobileMenu" class="hidden lg:hidden fixed top-[68px] left-4 right-4 z-40 bg-white rounded-2xl shadow-2xl shadow-blue-900/20 p-6 space-y-1">
+    <a href="#about" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">About</a>
+    <a href="#sectors" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Sectors</a>
+    <a href="#process" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Process</a>
+    <a href="#showcase" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Showcase</a>
+    <a href="#guarantee" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8FAFC] font-medium text-sm text-slate-700 transition">Guarantee</a>
     <a href="#contact" class="mobile-link block text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-3.5 rounded-full transition shadow-lg shadow-blue-500/25 mt-3">
       Hire Talent
     </a>
@@ -127,25 +127,26 @@
   <section class="relative min-h-[92vh] flex items-center overflow-hidden">
     <div class="absolute inset-0">
       <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2200&auto=format&fit=crop" alt="Corporate handshake" class="w-full h-full object-cover kenburns" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC]/85 to-[#F8FAFC]/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/10"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-[#F8FAFC] via-transparent to-transparent"></div>
+      <div class="absolute -bottom-32 -right-20 w-96 h-96 bg-blue-400 rounded-full opacity-20 blur-3xl"></div>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 w-full py-20">
       <div class="max-w-2xl space-y-7">
-        <div class="reveal in inline-flex items-center gap-2 bg-white/70 backdrop-blur-md text-blue-700 text-xs font-semibold px-4 py-2 rounded-full shadow-md shadow-blue-500/10">
+        <div class="reveal in inline-flex items-center gap-2 bg-blue-600/10 backdrop-blur-md text-blue-700 text-xs font-semibold px-4 py-2 rounded-full shadow-md shadow-blue-500/10">
           <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
           25 Years of Global Recruitment Excellence
         </div>
         <h1 class="reveal in reveal-d1 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#0F2942]">
-          Global Talent,
+          Global Talent,<br />
           <span class="grad-text">Delivered.</span>
         </h1>
         <p class="reveal in reveal-d2 text-lg text-slate-600 max-w-xl leading-relaxed">
           Grace International connects the Gulf &amp; Middle East with India's premier workforce — 50,000+ verified candidates, data-backed matching, and a 90-day risk-free deployment guarantee.
         </p>
         <div class="reveal in reveal-d3 flex flex-wrap gap-4 pt-2">
-          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-8 py-4 rounded-full transition shadow-xl shadow-blue-600/30">
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-8 py-4 rounded-full transition shadow-xl shadow-blue-600/40">
             Hire Global Talent
           </a>
           <a href="#about" class="bg-white/80 backdrop-blur-md hover:bg-white text-[#0F2942] text-sm font-semibold px-8 py-4 rounded-full transition shadow-lg shadow-slate-300/40">
@@ -171,7 +172,7 @@
     <!-- Floating stat card -->
     <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 z-10">
       <div class="floaty">
-        <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl shadow-blue-900/20 max-w-xs">
+        <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-2xl shadow-blue-900/20 max-w-xs">
           <div class="flex items-center justify-between mb-6">
             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Deployment Engine</span>
             <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full">Live</span>
@@ -238,15 +239,15 @@
         <div class="blob w-72 h-72 bg-blue-300 -top-10 -left-10"></div>
         <div class="relative grid grid-cols-2 gap-5">
           <div class="space-y-5">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" class="reveal w-full h-64 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Team collaboration" />
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-72 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Engineering evaluation" />
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" class="reveal w-full h-64 object-cover rounded-2xl shadow-2xl shadow-slate-300/60" alt="Team collaboration" />
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-72 object-cover rounded-2xl shadow-2xl shadow-slate-300/60" alt="Engineering evaluation" />
           </div>
           <div class="space-y-5 pt-10">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-80 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Business meeting" />
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d2 w-full h-56 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Office" />
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-80 object-cover rounded-2xl shadow-2xl shadow-slate-300/60" alt="Business meeting" />
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d2 w-full h-56 object-cover rounded-2xl shadow-2xl shadow-slate-300/60" alt="Office" />
           </div>
         </div>
-        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#0F2942] text-white rounded-2xl px-8 py-5 shadow-2xl shadow-blue-900/30 flex items-center gap-6">
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#0F2942] text-white rounded-xl px-8 py-5 shadow-2xl shadow-blue-900/30 flex items-center gap-6">
           <div class="text-center">
             <p class="text-2xl font-extrabold">25+</p>
             <p class="text-[10px] uppercase tracking-widest text-white/60 font-semibold">Years</p>
@@ -275,22 +276,22 @@
           Located in the heart of Mumbai, the business capital of India, Grace International is one of the leading overseas manpower consultancies approved by the Government of India. For over 25 years we've matched corporate clients across the Gulf and Middle East with India's most qualified, rigorously verified professionals.
         </p>
         <div class="reveal reveal-d3 space-y-4">
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">✓</div>
+          <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">✓</div>
             <div>
               <p class="font-bold text-[#0F2942]">Government Licensed &amp; ISO Certified</p>
               <p class="text-sm text-slate-500 mt-0.5">Fully accredited by the Government of India with ISO 9001:2015 quality management standards.</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">◈</div>
+          <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">◈</div>
             <div>
               <p class="font-bold text-[#0F2942]">In-House Specialty Center</p>
               <p class="text-sm text-slate-500 mt-0.5">Rigorous engineering and trade evaluations run through our own physical testing infrastructure.</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">⚡</div>
+          <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">⚡</div>
             <div>
               <p class="font-bold text-[#0F2942]">Digital-First Deployment</p>
               <p class="text-sm text-slate-500 mt-0.5">Computerized candidate matching accelerates mobilization to the Gulf and Middle East.</p>
@@ -313,42 +314,42 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="reveal group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+        <div class="reveal group lift rounded-3xl overflow-hidden bg-[#F8FAFC]">
           <div class="overflow-hidden h-56">
             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Heavy industrial" />
           </div>
           <div class="p-7">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🏗️</div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🏗️</div>
             <h3 class="font-bold text-lg mt-4">Heavy Industrial</h3>
             <p class="text-sm text-slate-500 mt-2 leading-relaxed">Manufacturing, infrastructure development, and plant operations personnel.</p>
           </div>
         </div>
-        <div class="reveal reveal-d1 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+        <div class="reveal reveal-d1 group lift rounded-3xl overflow-hidden bg-[#F8FAFC]">
           <div class="overflow-hidden h-56">
             <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Engineering" />
           </div>
           <div class="p-7">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">⚙️</div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">⚙️</div>
             <h3 class="font-bold text-lg mt-4">Engineering &amp; Infrastructure</h3>
             <p class="text-sm text-slate-500 mt-2 leading-relaxed">Certified technicians, project operators, and civil development teams.</p>
           </div>
         </div>
-        <div class="reveal reveal-d2 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+        <div class="reveal reveal-d2 group lift rounded-3xl overflow-hidden bg-[#F8FAFC]">
           <div class="overflow-hidden h-56">
             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Middle East skyline" />
           </div>
           <div class="p-7">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🌍</div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🌍</div>
             <h3 class="font-bold text-lg mt-4">Cross-Border Mobility</h3>
             <p class="text-sm text-slate-500 mt-2 leading-relaxed">Scalable deployments optimized for regulatory and visa compliance.</p>
           </div>
         </div>
-        <div class="reveal reveal-d3 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+        <div class="reveal reveal-d3 group lift rounded-3xl overflow-hidden bg-[#F8FAFC]">
           <div class="overflow-hidden h-56">
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Skilled trades" />
           </div>
           <div class="p-7">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🔧</div>
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🔧</div>
             <h3 class="font-bold text-lg mt-4">Skilled Trades</h3>
             <p class="text-sm text-slate-500 mt-2 leading-relaxed">Multi-tier verified professionals ready for immediate output.</p>
           </div>
@@ -369,27 +370,27 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="reveal relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+        <div class="reveal relative bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
           <span class="text-6xl font-extrabold grad-text opacity-90">01</span>
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">📋</div>
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">📋</div>
           <h3 class="font-bold text-lg mt-4">Mandate Intake</h3>
           <p class="text-sm text-slate-500 mt-2">Submit your hiring requirements through our digital corporate intake.</p>
         </div>
-        <div class="reveal reveal-d1 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+        <div class="reveal reveal-d1 relative bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
           <span class="text-6xl font-extrabold grad-text opacity-90">02</span>
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🔍</div>
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🔍</div>
           <h3 class="font-bold text-lg mt-4">Digital Screening</h3>
           <p class="text-sm text-slate-500 mt-2">Computerized matching across a 50,000+ verified candidate database.</p>
         </div>
-        <div class="reveal reveal-d2 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+        <div class="reveal reveal-d2 relative bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
           <span class="text-6xl font-extrabold grad-text opacity-90">03</span>
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🏭</div>
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🏭</div>
           <h3 class="font-bold text-lg mt-4">Physical Evaluation</h3>
           <p class="text-sm text-slate-500 mt-2">Rigorous engineering and trade assessments in our in-house center.</p>
         </div>
-        <div class="reveal reveal-d3 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+        <div class="reveal reveal-d3 relative bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
           <span class="text-6xl font-extrabold grad-text opacity-90">04</span>
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🚀</div>
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🚀</div>
           <h3 class="font-bold text-lg mt-4">Deployment &amp; Support</h3>
           <p class="text-sm text-slate-500 mt-2">Accelerated mobilization with 90-day risk indemnity coverage.</p>
         </div>
@@ -409,7 +410,7 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-        <div class="reveal group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 lift">
+        <div class="reveal group relative rounded-2xl overflow-hidden h-72 md:h-80 lift">
           <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Dubai skyline" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
           <div class="absolute bottom-0 p-6 text-white">
@@ -417,7 +418,7 @@
             <p class="text-xs text-white/70">Commercial &amp; High-Rise Construction</p>
           </div>
         </div>
-        <div class="reveal reveal-d1 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 md:mt-12 lift">
+        <div class="reveal reveal-d1 group relative rounded-2xl overflow-hidden h-72 md:h-80 md:mt-12 lift">
           <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Industrial plant" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
           <div class="absolute bottom-0 p-6 text-white">
@@ -425,7 +426,7 @@
             <p class="text-xs text-white/70">Petrochemical Plant Operations</p>
           </div>
         </div>
-        <div class="reveal reveal-d2 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 lift">
+        <div class="reveal reveal-d2 group relative rounded-2xl overflow-hidden h-72 md:h-80 lift">
           <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Port operations" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
           <div class="absolute bottom-0 p-6 text-white">
@@ -433,7 +434,7 @@
             <p class="text-xs text-white/70">Ports &amp; Logistics Manpower</p>
           </div>
         </div>
-        <div class="reveal reveal-d3 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 md:mt-12 lift">
+        <div class="reveal reveal-d3 group relative rounded-2xl overflow-hidden h-72 md:h-80 md:mt-12 lift">
           <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Energy sector" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
           <div class="absolute bottom-0 p-6 text-white">
@@ -448,7 +449,7 @@
   <!-- GUARANTEE -->
   <section id="guarantee" class="py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
     <div class="max-w-6xl mx-auto relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0F2942] via-[#173a5e] to-[#2563EB] rounded-[2.5rem] shadow-2xl shadow-blue-900/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0F2942] via-[#173a5e] to-[#2563EB] rounded-3xl shadow-2xl shadow-blue-900/40"></div>
       <div class="blob w-80 h-80 bg-blue-400 -top-20 -right-20"></div>
       <div class="blob w-72 h-72 bg-blue-300 -bottom-24 -left-16"></div>
       <div class="relative p-10 md:p-20 text-white text-center space-y-8">
@@ -479,7 +480,7 @@
         <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight">What Gulf Employers Say</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="reveal bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+        <div class="reveal bg-[#F8FAFC] rounded-3xl p-8 lift">
           <div class="text-amber-400 text-sm mb-4">★★★★★</div>
           <p class="text-slate-600 leading-relaxed text-sm">"Grace International delivered 200 verified site engineers within our project timeline. Their screening process is unmatched in the region."</p>
           <div class="flex items-center gap-4 mt-6">
@@ -490,7 +491,7 @@
             </div>
           </div>
         </div>
-        <div class="reveal reveal-d1 bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+        <div class="reveal reveal-d1 bg-[#F8FAFC] rounded-3xl p-8 lift">
           <div class="text-amber-400 text-sm mb-4">★★★★★</div>
           <p class="text-slate-600 leading-relaxed text-sm">"The 90-day guarantee gave our board total confidence. Every candidate arrived credentialed, assessed, and ready for deployment."</p>
           <div class="flex items-center gap-4 mt-6">
@@ -501,7 +502,7 @@
             </div>
           </div>
         </div>
-        <div class="reveal reveal-d2 bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+        <div class="reveal reveal-d2 bg-[#F8FAFC] rounded-3xl p-8 lift">
           <div class="text-amber-400 text-sm mb-4">★★★★★</div>
           <p class="text-slate-600 leading-relaxed text-sm">"From mandate to mobilization in under six weeks. A true partner in scaling our plant operations across two sites in KSA."</p>
           <div class="flex items-center gap-4 mt-6">
@@ -531,22 +532,22 @@
           Based in Mumbai, India's primary business capital, our teams leverage high-efficiency digital screening workflows alongside physical testing infrastructure to identify optimal candidate matches rapidly.
         </p>
         <div class="reveal reveal-d3 space-y-4">
-          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📍</div>
+          <div class="flex items-center gap-5 bg-white rounded-xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📍</div>
             <div>
               <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Head Office</p>
               <p class="font-semibold text-sm mt-1">201, Antariksh Thakoor House, Makwana Road, Marol, Andheri East, Mumbai - 400059</p>
             </div>
           </div>
-          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📞</div>
+          <div class="flex items-center gap-5 bg-white rounded-xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📞</div>
             <div>
               <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Telephone</p>
               <p class="font-semibold text-sm mt-1">+91 22 49741100 &nbsp;·&nbsp; +91 22 20880378</p>
             </div>
           </div>
-          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">✉️</div>
+          <div class="flex items-center gap-5 bg-white rounded-xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">✉️</div>
             <div>
               <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Email</p>
               <p class="font-semibold text-sm mt-1">
@@ -559,7 +560,7 @@
         </div>
       </div>
 
-      <div class="reveal reveal-d1 bg-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-slate-300/60 relative">
+      <div class="reveal reveal-d1 bg-white rounded-3xl p-8 md:p-10 shadow-2xl shadow-slate-300/60 relative">
         <div class="blob w-40 h-40 bg-blue-300 -top-10 -right-6"></div>
         <div class="relative">
           <div class="flex items-center justify-between mb-8">
@@ -573,16 +574,16 @@
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="text-xs font-bold text-slate-600 block mb-2">Company Name</label>
-                <input type="text" required placeholder="Acme Group LLC" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+                <input type="text" required placeholder="Acme Group LLC" class="w-full text-sm px-5 py-3.5 rounded-xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
               </div>
               <div>
                 <label class="text-xs font-bold text-slate-600 block mb-2">Work Email</label>
-                <input type="email" required placeholder="hr@acme.com" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+                <input type="email" required placeholder="hr@acme.com" class="w-full text-sm px-5 py-3.5 rounded-xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
               </div>
             </div>
             <div>
               <label class="text-xs font-bold text-slate-600 block mb-2">Recruitment Sector</label>
-              <select class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition">
+              <select class="w-full text-sm px-5 py-3.5 rounded-xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition">
                 <option>Heavy Industrial</option>
                 <option>Engineering &amp; Infrastructure</option>
                 <option>Multinational Cross-Border</option>
@@ -591,11 +592,11 @@
             </div>
             <div>
               <label class="text-xs font-bold text-slate-600 block mb-2">Headcount Required</label>
-              <input type="number" min="1" placeholder="e.g. 150" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+              <input type="number" min="1" placeholder="e.g. 150" class="w-full text-sm px-5 py-3.5 rounded-xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
             </div>
             <div>
               <label class="text-xs font-bold text-slate-600 block mb-2">Mandate Details</label>
-              <textarea rows="4" placeholder="Describe your hiring mandate, roles, and timelines..." class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400 resize-none"></textarea>
+              <textarea rows="4" placeholder="Describe your hiring mandate, roles, and timelines..." class="w-full text-sm px-5 py-3.5 rounded-xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400 resize-none"></textarea>
             </div>
             <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-sm font-bold py-4 rounded-full transition shadow-xl shadow-blue-500/30">
               Submit Mandate
@@ -613,7 +614,7 @@
       <div class="grid md:grid-cols-4 gap-12 pb-14">
         <div class="space-y-4 md:col-span-2">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center font-extrabold text-white text-xl">G</div>
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center font-extrabold text-white text-xl">G</div>
             <div>
               <span class="text-lg font-extrabold tracking-tight text-white block leading-none">GRACE</span>
               <span class="text-[9px] uppercase tracking-[0.25em] text-white/40 font-semibold">International</span>
