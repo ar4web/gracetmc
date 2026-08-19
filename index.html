@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grace International - ISO 9001:2015 certified overseas manpower consultancy. Government of India approved agency connecting the Gulf & Middle East with India's premier talent." />
+  <title>Grace International | Elite Global Workforce Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #F8FAFC; color: #0F2942; }
+    html { scroll-behavior: smooth; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .2s; }
+    .reveal-d3 { transition-delay: .3s; }
+
+    /* Marquee */
+    .marquee-track { animation: marquee 36s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* Floating blobs */
+    .blob { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: .5; pointer-events: none; }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+    .floaty { animation: floaty 7s ease-in-out infinite; }
+
+    /* Slow zoom for hero bg */
+    @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.12); } }
+    .kenburns { animation: kenburns 22s ease-in-out infinite alternate; }
+
+    /* Card hover lift */
+    .lift { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s; }
+    .lift:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -20px rgba(15,41,66,.25); }
+
+    /* Image zoom on hover */
+    .zoom-img { transition: transform 1s cubic-bezier(.16,1,.3,1); }
+    .group:hover .zoom-img { transform: scale(1.08); }
+
+    /* Gradient text */
+    .grad-text { background: linear-gradient(120deg,#2563EB, #3B82F6 40%, #60A5FA); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- TOP TRUST BAR -->
+  <div class="bg-[#0F2942] text-white/85 text-xs py-2.5 px-4 md:px-8 flex flex-wrap justify-between items-center gap-2">
+    <div class="flex items-center gap-3">
+      <span class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Govt. of India Approved Reg: <strong class="text-white">B-0657/MUM/PER/1000+/3/8187/2001</strong></span>
+      </span>
+      <span class="hidden sm:inline text-white/50">|</span>
+      <span class="hidden sm:inline text-white">ISO 9001:2015 Certified</span>
+    </div>
+    <div class="hidden md:flex gap-5">
+      <a href="mailto:info@gracetmc.com" class="hover:text-white transition">info@gracetmc.com</a>
+      <span>+91 22 49741100</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl px-4 md:px-8 py-4 flex justify-between items-center shadow-[0_4px_30px_rgba(15,41,66,0.06)]">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center font-extrabold text-white text-xl shadow-lg shadow-blue-500/30">G</div>
+      <div>
+        <span class="text-lg font-extrabold tracking-tight block leading-none">GRACE</span>
+        <span class="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-semibold">International</span>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-600">
+      <a href="#about" class="hover:text-blue-600 transition">About</a>
+      <a href="#sectors" class="hover:text-blue-600 transition">Sectors</a>
+      <a href="#process" class="hover:text-blue-600 transition">Process</a>
+      <a href="#showcase" class="hover:text-blue-600 transition">Showcase</a>
+      <a href="#guarantee" class="hover:text-blue-600 transition">Guarantee</a>
+    </nav>
+    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition shadow-lg shadow-blue-500/25">
+      Hire Talent
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative min-h-[92vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2200&auto=format&fit=crop" alt="Corporate handshake" class="w-full h-full object-cover kenburns" />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#F8FAFC] via-[#F8FAFC]/85 to-[#F8FAFC]/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#F8FAFC] via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 w-full py-20">
+      <div class="max-w-2xl space-y-7">
+        <div class="reveal in inline-flex items-center gap-2 bg-white/70 backdrop-blur-md text-blue-700 text-xs font-semibold px-4 py-2 rounded-full shadow-md shadow-blue-500/10">
+          <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+          25 Years of Global Recruitment Excellence
+        </div>
+        <h1 class="reveal in reveal-d1 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#0F2942]">
+          Global Talent,
+          <span class="grad-text">Delivered.</span>
+        </h1>
+        <p class="reveal in reveal-d2 text-lg text-slate-600 max-w-xl leading-relaxed">
+          Grace International connects the Gulf &amp; Middle East with India's premier workforce — 50,000+ verified candidates, data-backed matching, and a 90-day risk-free deployment guarantee.
+        </p>
+        <div class="reveal in reveal-d3 flex flex-wrap gap-4 pt-2">
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-8 py-4 rounded-full transition shadow-xl shadow-blue-600/30">
+            Hire Global Talent
+          </a>
+          <a href="#about" class="bg-white/80 backdrop-blur-md hover:bg-white text-[#0F2942] text-sm font-semibold px-8 py-4 rounded-full transition shadow-lg shadow-slate-300/40">
+            Explore Our Agency
+          </a>
+        </div>
+
+        <div class="flex items-center gap-4 pt-6">
+          <div class="flex -space-x-3">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover border-2 border-white shadow" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover border-2 border-white shadow" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover border-2 border-white shadow" alt="Client" />
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=100&auto=format&fit=crop" class="w-11 h-11 rounded-full object-cover border-2 border-white shadow" alt="Client" />
+          </div>
+          <div>
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <p class="text-xs text-slate-500 font-medium">Trusted by <span class="font-bold text-[#0F2942]">100+ MNCs</span> across the Gulf</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating stat card -->
+    <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 z-10 floaty">
+      <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl shadow-blue-900/20 max-w-xs">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Deployment Engine</span>
+          <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full">Live</span>
+        </div>
+        <div class="space-y-5">
+          <div>
+            <p class="text-3xl font-extrabold text-[#0F2942]">50,000+</p>
+            <p class="text-xs text-slate-500 mt-1">Verified candidates on demand</p>
+          </div>
+          <div class="h-px bg-slate-200/70"></div>
+          <div>
+            <p class="text-3xl font-extrabold text-[#0F2942]">100+</p>
+            <p class="text-xs text-slate-500 mt-1">MNC clients served</p>
+          </div>
+          <div class="h-px bg-slate-200/70"></div>
+          <div>
+            <p class="text-3xl font-extrabold text-[#0F2942]">90 Days</p>
+            <p class="text-xs text-slate-500 mt-1">Risk indemnity guarantee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT MARQUEE -->
+  <section class="py-14 overflow-hidden bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 mb-8 flex items-center gap-4">
+      <p class="text-xs uppercase tracking-[0.3em] text-slate-400 font-bold whitespace-nowrap">Trusted Partners</p>
+      <div class="h-px bg-gradient-to-r from-blue-200 to-transparent w-full"></div>
+    </div>
+    <div class="relative">
+      <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+      <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+      <div class="marquee-track flex items-center gap-16 whitespace-nowrap w-max">
+        <div class="flex items-center gap-16">
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">ETISALAT</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">SABIC</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">ARAMCO</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Emaar</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">DP World</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">QNB</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Nakheel</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Bechtel</span>
+        </div>
+        <div class="flex items-center gap-16" aria-hidden="true">
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">ETISALAT</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">SABIC</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">ARAMCO</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Emaar</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">DP World</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">QNB</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Nakheel</span>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-300 hover:text-blue-600 transition">Bechtel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="blob w-72 h-72 bg-blue-300 -top-10 -left-10"></div>
+        <div class="relative grid grid-cols-2 gap-5">
+          <div class="space-y-5">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" class="reveal w-full h-64 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Team collaboration" />
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-72 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Engineering evaluation" />
+          </div>
+          <div class="space-y-5 pt-10">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d1 w-full h-80 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Business meeting" />
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" class="reveal reveal-d2 w-full h-56 object-cover rounded-3xl shadow-2xl shadow-slate-300/60" alt="Office" />
+          </div>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#0F2942] text-white rounded-2xl px-8 py-5 shadow-2xl shadow-blue-900/30 flex items-center gap-6">
+          <div class="text-center">
+            <p class="text-2xl font-extrabold">25+</p>
+            <p class="text-[10px] uppercase tracking-widest text-white/60 font-semibold">Years</p>
+          </div>
+          <div class="w-px h-10 bg-white/15"></div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold">50K</p>
+            <p class="text-[10px] uppercase tracking-widest text-white/60 font-semibold">Candidates</p>
+          </div>
+          <div class="w-px h-10 bg-white/15"></div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold">100+</p>
+            <p class="text-[10px] uppercase tracking-widest text-white/60 font-semibold">MNCs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-7">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> About The Agency
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Mumbai's Trusted Bridge to the <span class="grad-text">Gulf Workforce</span>
+        </h2>
+        <p class="reveal reveal-d2 text-slate-600 leading-relaxed">
+          Located in the heart of Mumbai, the business capital of India, Grace International is one of the leading overseas manpower consultancies approved by the Government of India. For over 25 years we've matched corporate clients across the Gulf and Middle East with India's most qualified, rigorously verified professionals.
+        </p>
+        <div class="reveal reveal-d3 space-y-4">
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">✓</div>
+            <div>
+              <p class="font-bold text-[#0F2942]">Government Licensed &amp; ISO Certified</p>
+              <p class="text-sm text-slate-500 mt-0.5">Fully accredited by the Government of India with ISO 9001:2015 quality management standards.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">◈</div>
+            <div>
+              <p class="font-bold text-[#0F2942]">In-House Specialty Center</p>
+              <p class="text-sm text-slate-500 mt-0.5">Rigorous engineering and trade evaluations run through our own physical testing infrastructure.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-lg shrink-0 shadow-lg shadow-blue-500/30">⚡</div>
+            <div>
+              <p class="font-bold text-[#0F2942]">Digital-First Deployment</p>
+              <p class="text-sm text-slate-500 mt-0.5">Computerized candidate matching accelerates mobilization to the Gulf and Middle East.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS SHOWCASE -->
+  <section id="sectors" class="py-24 md:py-32 px-4 md:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> Specializations <span class="w-8 h-px bg-blue-600"></span>
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight">Industry Specializations</h2>
+        <p class="reveal reveal-d2 text-slate-500">Flexible, highly customized hiring frameworks across the key global domains powering the Gulf economy.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="reveal group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Heavy industrial" />
+          </div>
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🏗️</div>
+            <h3 class="font-bold text-lg mt-4">Heavy Industrial</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">Manufacturing, infrastructure development, and plant operations personnel.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d1 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Engineering" />
+          </div>
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">⚙️</div>
+            <h3 class="font-bold text-lg mt-4">Engineering &amp; Infrastructure</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">Certified technicians, project operators, and civil development teams.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d2 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Middle East skyline" />
+          </div>
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🌍</div>
+            <h3 class="font-bold text-lg mt-4">Cross-Border Mobility</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">Scalable deployments optimized for regulatory and visa compliance.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d3 group lift rounded-[2rem] overflow-hidden bg-[#F8FAFC]">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Skilled trades" />
+          </div>
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white text-xl -mt-12 relative shadow-xl shadow-blue-500/30">🔧</div>
+            <h3 class="font-bold text-lg mt-4">Skilled Trades</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">Multi-tier verified professionals ready for immediate output.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-blue-200 -right-20 top-20"></div>
+    <div class="max-w-7xl mx-auto relative">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> How We Work <span class="w-8 h-px bg-blue-600"></span>
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight">A Deployment Pipeline Engineered for Speed</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="reveal relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+          <span class="text-6xl font-extrabold grad-text opacity-90">01</span>
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">📋</div>
+          <h3 class="font-bold text-lg mt-4">Mandate Intake</h3>
+          <p class="text-sm text-slate-500 mt-2">Submit your hiring requirements through our digital corporate intake.</p>
+        </div>
+        <div class="reveal reveal-d1 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+          <span class="text-6xl font-extrabold grad-text opacity-90">02</span>
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🔍</div>
+          <h3 class="font-bold text-lg mt-4">Digital Screening</h3>
+          <p class="text-sm text-slate-500 mt-2">Computerized matching across a 50,000+ verified candidate database.</p>
+        </div>
+        <div class="reveal reveal-d2 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+          <span class="text-6xl font-extrabold grad-text opacity-90">03</span>
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🏭</div>
+          <h3 class="font-bold text-lg mt-4">Physical Evaluation</h3>
+          <p class="text-sm text-slate-500 mt-2">Rigorous engineering and trade assessments in our in-house center.</p>
+        </div>
+        <div class="reveal reveal-d3 relative bg-white rounded-[2rem] p-8 shadow-[0_10px_40px_rgba(15,41,66,0.08)] lift">
+          <span class="text-6xl font-extrabold grad-text opacity-90">04</span>
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white mt-6 shadow-lg shadow-blue-500/30">🚀</div>
+          <h3 class="font-bold text-lg mt-4">Deployment &amp; Support</h3>
+          <p class="text-sm text-slate-500 mt-2">Accelerated mobilization with 90-day risk indemnity coverage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE GALLERY -->
+  <section id="showcase" class="py-24 md:py-32 px-4 md:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> Field Proven <span class="w-8 h-px bg-blue-600"></span>
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight">Deployments Across the Gulf</h2>
+        <p class="reveal reveal-d2 text-slate-500">From megaproject sites to plant operations — our people power the region's defining industries.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="reveal group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 lift">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Dubai skyline" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <p class="font-bold">UAE · Dubai</p>
+            <p class="text-xs text-white/70">Commercial &amp; High-Rise Construction</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d1 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 md:mt-12 lift">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Industrial plant" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <p class="font-bold">KSA · Jubail</p>
+            <p class="text-xs text-white/70">Petrochemical Plant Operations</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d2 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 lift">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Port operations" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <p class="font-bold">UAE · Jebel Ali</p>
+            <p class="text-xs text-white/70">Ports &amp; Logistics Manpower</p>
+          </div>
+        </div>
+        <div class="reveal reveal-d3 group relative rounded-[1.75rem] overflow-hidden h-72 md:h-80 md:mt-12 lift">
+          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" class="zoom-img w-full h-full object-cover" alt="Energy sector" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0F2942]/90 via-transparent to-transparent opacity-80"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <p class="font-bold">Qatar · Doha</p>
+            <p class="text-xs text-white/70">Energy &amp; Infrastructure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section id="guarantee" class="py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto relative">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0F2942] via-[#173a5e] to-[#2563EB] rounded-[2.5rem] shadow-2xl shadow-blue-900/40"></div>
+      <div class="blob w-80 h-80 bg-blue-400 -top-20 -right-20"></div>
+      <div class="blob w-72 h-72 bg-blue-300 -bottom-24 -left-16"></div>
+      <div class="relative p-10 md:p-20 text-white text-center space-y-8">
+        <div class="reveal inline-flex items-center gap-2 text-blue-200 text-xs font-bold uppercase tracking-[0.3em]">
+          <span class="w-8 h-px bg-blue-300"></span> Unprecedented Accountability <span class="w-8 h-px bg-blue-300"></span>
+        </div>
+        <h2 class="reveal reveal-d1 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl mx-auto">
+          The Grace 90-Day Probationary Guarantee
+        </h2>
+        <p class="reveal reveal-d2 text-white/75 max-w-2xl mx-auto leading-relaxed">
+          We guarantee the specific fitness and performance of every selected candidate. If a candidate is determined to be unsuitable during the first 90 days of their probationary deployment, we will repatriate them entirely at our own expense.
+        </p>
+        <div class="reveal reveal-d3 flex justify-center gap-3 pt-4">
+          <span class="bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full text-sm font-semibold">Zero Replacement Cost</span>
+          <span class="bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full text-sm font-semibold">Full Repatriation Covered</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-24 md:py-32 px-4 md:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-5">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> Client Voices <span class="w-8 h-px bg-blue-600"></span>
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight">What Gulf Employers Say</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+          <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+          <p class="text-slate-600 leading-relaxed text-sm">"Grace International delivered 200 verified site engineers within our project timeline. Their screening process is unmatched in the region."</p>
+          <div class="flex items-center gap-4 mt-6">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover shadow" alt="Client" />
+            <div>
+              <p class="font-bold text-sm">Ahmed Al Mansouri</p>
+              <p class="text-xs text-slate-400">Head of Procurement · Dubai, UAE</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-d1 bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+          <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+          <p class="text-slate-600 leading-relaxed text-sm">"The 90-day guarantee gave our board total confidence. Every candidate arrived credentialed, assessed, and ready for deployment."</p>
+          <div class="flex items-center gap-4 mt-6">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover shadow" alt="Client" />
+            <div>
+              <p class="font-bold text-sm">Sarah Al Khalifa</p>
+              <p class="text-xs text-slate-400">HR Director · Doha, Qatar</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-d2 bg-[#F8FAFC] rounded-[2rem] p-8 lift">
+          <div class="text-amber-400 text-sm mb-4">★★★★★</div>
+          <p class="text-slate-600 leading-relaxed text-sm">"From mandate to mobilization in under six weeks. A true partner in scaling our plant operations across two sites in KSA."</p>
+          <div class="flex items-center gap-4 mt-6">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover shadow" alt="Client" />
+            <div>
+              <p class="font-bold text-sm">Omar Al Farsi</p>
+              <p class="text-xs text-slate-400">Operations VP · Riyadh, KSA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-blue-200 -left-24 bottom-10"></div>
+    <div class="max-w-7xl mx-auto relative grid lg:grid-cols-2 gap-16 items-start">
+      <div class="space-y-8">
+        <div class="reveal inline-flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-[0.25em]">
+          <span class="w-8 h-px bg-blue-600"></span> Global Headquarters
+        </div>
+        <h2 class="reveal reveal-d1 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Let's Build Your <span class="grad-text">Global Workforce</span>
+        </h2>
+        <p class="reveal reveal-d2 text-slate-600 leading-relaxed">
+          Based in Mumbai, India's primary business capital, our teams leverage high-efficiency digital screening workflows alongside physical testing infrastructure to identify optimal candidate matches rapidly.
+        </p>
+        <div class="reveal reveal-d3 space-y-4">
+          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📍</div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Head Office</p>
+              <p class="font-semibold text-sm mt-1">201, Antariksh Thakoor House, Makwana Road, Marol, Andheri East, Mumbai - 400059</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">📞</div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Telephone</p>
+              <p class="font-semibold text-sm mt-1">+91 22 49741100 &nbsp;·&nbsp; +91 22 20880378</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5 bg-white rounded-2xl p-6 shadow-[0_10px_40px_rgba(15,41,66,0.08)]">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">✉️</div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Email</p>
+              <p class="font-semibold text-sm mt-1">
+                <a href="mailto:info@gracetmc.com" class="hover:text-blue-600 transition">info@gracetmc.com</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:graceintl@gmail.com" class="hover:text-blue-600 transition">graceintl@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d1 bg-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-slate-300/60 relative">
+        <div class="blob w-40 h-40 bg-blue-300 -top-10 -right-6"></div>
+        <div class="relative">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-xl font-extrabold">Corporate Requirement Intake</h3>
+            <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Evaluators Online
+            </span>
+          </div>
+          <p class="text-sm text-slate-500 mb-8">Submit your current hiring mandates. Our evaluators will follow up within 12 business hours.</p>
+          <form onsubmit="event.preventDefault(); alert('Thank you. Our evaluators will follow up within 12 business hours.');" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="text-xs font-bold text-slate-600 block mb-2">Company Name</label>
+                <input type="text" required placeholder="Acme Group LLC" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+              </div>
+              <div>
+                <label class="text-xs font-bold text-slate-600 block mb-2">Work Email</label>
+                <input type="email" required placeholder="hr@acme.com" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+              </div>
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-2">Recruitment Sector</label>
+              <select class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition">
+                <option>Heavy Industrial</option>
+                <option>Engineering &amp; Infrastructure</option>
+                <option>Multinational Cross-Border</option>
+                <option>Skilled Trades</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-2">Headcount Required</label>
+              <input type="number" min="1" placeholder="e.g. 150" class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400" />
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-600 block mb-2">Mandate Details</label>
+              <textarea rows="4" placeholder="Describe your hiring mandate, roles, and timelines..." class="w-full text-sm px-5 py-3.5 rounded-2xl bg-[#F8FAFC] focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 transition placeholder:text-slate-400 resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-sm font-bold py-4 rounded-full transition shadow-xl shadow-blue-500/30">
+              Submit Mandate
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0F2942] text-white/70 pt-20 pb-8 px-4 md:px-8 relative overflow-hidden">
+    <div class="blob w-80 h-80 bg-blue-500 -top-24 -right-24"></div>
+    <div class="max-w-7xl mx-auto relative">
+      <div class="grid md:grid-cols-4 gap-12 pb-14">
+        <div class="space-y-4 md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center font-extrabold text-white text-xl">G</div>
+            <div>
+              <span class="text-lg font-extrabold tracking-tight text-white block leading-none">GRACE</span>
+              <span class="text-[9px] uppercase tracking-[0.25em] text-white/40 font-semibold">International</span>
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed max-w-sm">
+            Elite overseas manpower consultancy matching top-tier Indian talent with corporate clients across the Gulf and Middle East. ISO 9001:2015 certified &amp; Government of India approved since 2001.
+          </p>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-white mb-5">Quick Links</p>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#about" class="hover:text-white transition">About Agency</a></li>
+            <li><a href="#sectors" class="hover:text-white transition">Sectors</a></li>
+            <li><a href="#process" class="hover:text-white transition">Process</a></li>
+            <li><a href="#guarantee" class="hover:text-white transition">Guarantee</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-white mb-5">Head Office</p>
+          <p class="text-sm leading-relaxed">201, Antariksh Thakoor House, Makwana Road, Marol, Andheri East, Mumbai - 400059</p>
+          <p class="text-sm mt-4">+91 22 49741100</p>
+          <p class="text-sm"><a href="mailto:info@gracetmc.com" class="hover:text-white transition">info@gracetmc.com</a></p>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row gap-3 justify-between items-center text-xs text-white/40">
+        <span>© 2026 Grace International Manpower Consultants. All Rights Reserved.</span>
+        <span class="text-center">ISO 9001:2015 Registered Agency · Govt. of India Reg. No. B-0657/MUM/PER/1000+/3/8187/2001</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
